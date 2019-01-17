@@ -1,6 +1,5 @@
 #include <stdio.h>
-#include<math.h>
-
+#include <math.h>
 
 struct lxd
 {
@@ -10,7 +9,7 @@ struct lxd
 
 int main()
 {
-    int index=0;
+    int index = 0;
     struct lxd arr[100];
     printf("欢迎进入车位管理系统\n");
 
@@ -32,19 +31,33 @@ int main()
             printf("请输入添加车的x坐标和y坐标\n");
             int x;
             int y;
-            scanf("%d",&x);
-            scanf("%d",&y);
-            arr[index].x=x;
-            arr[index].y=y;
+            scanf("%d", &x);
+            scanf("%d", &y);
+            arr[index].x = x;
+            arr[index].y = y;
             index++;
             printf("添加成功，点击回车继续\n");
             char xx;
-            scanf("%c",&xx);
-            scanf("%c",&xx);
-
+            scanf("%c", &xx);
+            scanf("%c", &xx);
         }
         if (code == 2)
         {
+
+            if (index > 0)
+            {
+                index--;
+                printf("删除成功，点击回车继续\n");
+                char xx;
+                scanf("%c", &xx);
+                scanf("%c", &xx);
+            }
+            else{
+                printf("删除失败，点击回车继续\n");
+                char xx;
+                scanf("%c", &xx);
+                scanf("%c", &xx);
+            }
         }
         if (code == 3)
         {
