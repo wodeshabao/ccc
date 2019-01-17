@@ -52,7 +52,8 @@ int main()
                 scanf("%c", &xx);
                 scanf("%c", &xx);
             }
-            else{
+            else
+            {
                 printf("删除失败，点击回车继续\n");
                 char xx;
                 scanf("%c", &xx);
@@ -61,6 +62,16 @@ int main()
         }
         if (code == 3)
         {
+            printf("您添加车辆位置为\n");
+
+            for (int i = 0; i < index; i++)
+            {
+                printf("您附近的第%d辆车为：（%d，%d）\n", i + 1, arr[i].x, arr[i].y);
+            }
+            printf("点击回车继续\n");
+            char xx;
+            scanf("%c", &xx);
+            scanf("%c", &xx);
         }
         if (code == 4)
         {
